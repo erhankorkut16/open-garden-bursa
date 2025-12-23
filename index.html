@@ -147,7 +147,644 @@
                               background: #333;
                               color: white;
                               padding: 2rem;
-                              text-align: center;
+                              text-align: center;<!DOCTYPE html>
+                  <html lang="tr">
+                  <head>
+                      <meta charset="UTF-8">
+                      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                      <meta name="description" content="Open Garden Bursa - Bursa'nın en modern düğün ve toplantı salonu">
+                      <title>Open Garden Bursa - Düğün ve Toplantı Salonu</title>
+
+                      <!-- Bootstrap 5.3.0 CSS -->
+                      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+                      <!-- Font Awesome 6.4.0 -->
+                      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+                      <style>
+                          :root {
+                                        --primary-color: #667eea;
+                                        --secondary-color: #764ba2;
+                                        --light-bg: #f9f9f9;
+                                        --dark-text: #333;
+                          }
+
+                          * {
+                                        margin: 0;
+                                        padding: 0;
+                                        box-sizing: border-box;
+                          }
+
+                          body {
+                                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                                        line-height: 1.6;
+                                        color: var(--dark-text);
+                                        background: var(--light-bg);
+                          }
+
+                          /* Navbar Styling */
+                          .navbar {
+                                        background: rgba(255, 255, 255, 0.95) !important;
+                                        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                                        position: sticky;
+                                        top: 0;
+                                        z-index: 1000;
+                          }
+
+                          .navbar-brand {
+                                        color: var(--primary-color) !important;
+                                        font-weight: 700;
+                                        font-size: 1.5rem;
+                          }
+
+                          .nav-link {
+                                        color: var(--dark-text) !important;
+                                        font-weight: 500;
+                                        transition: color 0.3s ease;
+                                        margin: 0 0.5rem;
+                          }
+
+                          .nav-link:hover {
+                                        color: var(--primary-color) !important;
+                          }
+
+                          /* Hero Section */
+                          .hero-section {
+                                        background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+                                        color: white;
+                                        padding: 6rem 0;
+                                        text-align: center;
+                                        position: relative;
+                                        overflow: hidden;
+                          }
+
+                          .hero-section h1 {
+                                        font-size: 3.5rem;
+                                        font-weight: 700;
+                                        margin-bottom: 1rem;
+                                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+                          }
+
+                          .hero-section p {
+                                        font-size: 1.2rem;
+                                        margin-bottom: 2rem;
+                                        opacity: 0.95;
+                          }
+
+                          /* Services Section */
+                          .features-section {
+                                        padding: 4rem 0;
+                                        background: white;
+                          }
+
+                          .features-section h2 {
+                                        text-align: center;
+                                        color: var(--primary-color);
+                                        margin-bottom: 3rem;
+                                        font-weight: 700;
+                          }
+
+                          .service-card {
+                                        background: white;
+                                        padding: 2rem;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                                        border: none;
+                                        height: 100%;
+                          }
+
+                          .service-card:hover {
+                                        transform: translateY(-10px);
+                                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                          }
+
+                          .service-card h3 {
+                                        color: var(--primary-color);
+                                        margin-bottom: 1rem;
+                                        font-weight: 600;
+                          }
+
+                          .service-card i {
+                                        font-size: 2.5rem;
+                                        color: var(--primary-color);
+                                        margin-bottom: 1rem;
+                          }
+
+                          /* Gallery Section */
+                          .gallery-section {
+                                        padding: 4rem 0;
+                                        background: var(--light-bg);
+                          }
+
+                          .gallery-section h2 {
+                                        text-align: center;
+                                        color: var(--primary-color);
+                                        margin-bottom: 3rem;
+                                        font-weight: 700;
+                          }
+
+                          .gallery-item {
+                                        position: relative;
+                                        overflow: hidden;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                          }
+
+                          .gallery-item img {
+                                        width: 100%;
+                                        height: 250px;
+                                        object-fit: cover;
+                                        transition: transform 0.3s ease;
+                          }
+
+                          .gallery-item:hover img {
+                                        transform: scale(1.1);
+                          }
+
+                          /* Table Styling */
+                          .table-responsive {
+                                        padding: 2rem;
+                                        background: white;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                          }
+
+                          table {
+                                        border-collapse: collapse;
+                          }
+
+                          table thead th {
+                                        background: var(--primary-color);
+                                        color: white;
+                                        padding: 1rem;
+                                        border: none;
+                          }
+
+                          table tbody td {
+                                        padding: 1rem;
+                                        border-bottom: 1px solid #eee;
+                          }
+
+                          table tbody tr:hover {
+                                        background: var(--light-bg);
+                          }
+
+                          /* Contact Section */
+                          .contact-section {
+                                        padding: 4rem 0;
+                                        background: white;
+                          }
+
+                          .contact-section h2 {
+                                        text-align: center;
+                                        color: var(--primary-color);
+                                        margin-bottom: 3rem;
+                                        font-weight: 700;
+                          }
+
+                          .contact-card {
+                                        background: var(--light-bg);
+                                        padding: 2rem;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                        text-align: center;
+                          }
+
+                          .contact-card h3 {
+                                        color: var(--primary-color);
+                                        margin-bottom: 1rem;
+                                        font-weight: 600;
+                          }
+
+                          .contact-card i {
+                                        font-size: 2rem;
+                                        color: var(--primary-color);
+                                        margin-bottom: 1rem;
+                          }
+
+                          .contact-card a {
+                                        color: var(--primary-color);
+                                        text-decoration: none;
+                                        font-weight: 500;
+                          }
+
+                          .contact-card a:hover {
+                                        text-decoration: underline;
+                          }
+
+                          /* Partners Section */
+                          .partners-section {
+                                        padding: 4rem 0;
+                                        background: var(--light-bg);
+                          }
+
+                          .partners-section h2 {
+                                        text-align: center;
+                                        color: var(--primary-color);
+                                        margin-bottom: 3rem;
+                                        font-weight: 700;
+                          }
+
+                          .partner-card {
+                                        background: white;
+                                        padding: 2rem;
+                                        border-radius: 8px;
+                                        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                                        transition: all 0.3s ease;
+                          }
+
+                          .partner-card:hover {
+                                        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+                          }
+
+                          .partner-card h3 {
+                                        color: var(--primary-color);
+                                        margin-bottom: 1rem;
+                          }
+
+                          /* Buttons */
+                          .btn-primary, .btn-primary:hover {
+                                        background: var(--primary-color);
+                                        border-color: var(--primary-color);
+                          }
+
+                          .btn-primary:hover {
+                                        background: var(--secondary-color);
+                                        border-color: var(--secondary-color);
+                          }
+
+                          .btn-lg {
+                                        padding: 0.75rem 2.5rem;
+                                        font-size: 1.1rem;
+                                        border-radius: 50px;
+                          }
+
+                          .whatsapp-btn {
+                                        background: #25D366;
+                                        color: white;
+                                        padding: 0.75rem 2rem;
+                                        border-radius: 50px;
+                                        border: none;
+                                        font-weight: 500;
+                                        transition: all 0.3s ease;
+                                        position: fixed;
+                                        bottom: 20px;
+                                        right: 20px;
+                                        display: flex;
+                                        align-items: center;
+                                        gap: 0.5rem;
+                                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                                        z-index: 999;
+                          }
+
+                          .whatsapp-btn:hover {
+                                        background: #20BA5A;
+                                        transform: scale(1.1);
+                          }
+
+                          /* Footer */
+                          footer {
+                                        background: #333;
+                                        color: white;
+                                        padding: 2rem;
+                                        text-align: center;
+                                        margin-top: 2rem;
+                          }
+
+                          footer a {
+                                        color: var(--primary-color);
+                                        text-decoration: none;
+                                        margin: 0 1rem;
+                                        transition: all 0.3s ease;
+                          }
+
+                          footer a:hover {
+                                        text-decoration: underline;
+                          }
+
+                          /* Animations */
+                          @keyframes fadeInUp {
+                                        from {
+                                                          opacity: 0;
+                                                          transform: translateY(30px);
+                                        }
+                                        to {
+                                                          opacity: 1;
+                                                          transform: translateY(0);
+                                        }
+                          }
+
+                          .fade-in {
+                                        animation: fadeInUp 0.6s ease-out;
+                          }
+
+                          /* Responsive */
+                          @media (max-width: 768px) {
+                                        .hero-section h1 {
+                                                          font-size: 2.5rem;
+                                        }
+
+                                        .hero-section p {
+                                                          font-size: 1rem;
+                                        }
+
+                                        .service-card {
+                                                          margin-bottom: 1.5rem;
+                                        }
+                          }
+                      </style>
+  </head>
+  <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+                  <div class="container">
+                                <a class="navbar-brand" href="#home">
+                                                  <i class="fas fa-crown"></i>i> Open Garden Bursa
+                                </a>a>
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                                                  <span class="navbar-toggler-icon"></span>span>
+                                </button>button>
+                                <div class="collapse navbar-collapse" id="navbarNav">
+                                                  <ul class="navbar-nav ms-auto">
+                                                                        <li class="nav-item">
+                                                                                                  <a class="nav-link" href="#home">Anasayfa</a>a>
+                                                                        </li>li>
+                                                                        <li class="nav-item">
+                                                                                                  <a class="nav-link" href="#features">Hizmetlerimiz</a>a>
+                                                                        </li>li>
+                                                                        <li class="nav-item">
+                                                                                                  <a class="nav-link" href="#gallery">Galeri</a>a>
+                                                                        </li>li>
+                                                                        <li class="nav-item">
+                                                                                                  <a class="nav-link" href="#partners">İş Ortaklarımız</a>a>
+                                                                        </li>li>
+                                                                        <li class="nav-item">
+                                                                                                  <a class="nav-link" href="#contact">İletişim</a>a>
+                                                                        </li>li>
+                                                  </ul>ul>
+                                </div>div>
+                  </div>div>
+        </nav>nav>
+
+        <!-- Hero Section -->
+        <section class="hero-section fade-in" id="home">
+                  <div class="container">
+                                <h1><i class="fas fa-heart"></i>i> Open Garden Düğün ve Toplantı Salonu</h1>
+                              <p>Düğün, Nişan, Kına Geceleri, Özel gün ve Gecelerinizde Davet Organizasyonları; 
+                                             Mezuniyet Baloları, Doğum Günü Partileri ve benzer Tüm Organizasyonlarınıza Ev Sahipliği Yapmak için Sizlerleyiz...</p>
+                              <a href="#contact" class="btn btn-primary btn-lg">Rezervasyon Yap</a>a>
+                  </div>div>
+        </section>section>
+      
+      <!-- Features Section -->
+      <section class="features-section fade-in" id="features">
+              <div class="container">
+                          <h2><i class="fas fa-star"></i>i> Özel Hizmetlerimiz</h2>
+                          <div class="row g-4">
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="service-card">
+                                                                                      <i class="fas fa-music"></i>i>
+                                                                                      <h3>Sınırsız Eğlence</h3>
+                                                                                      <p>Gece düğünlerimizde saat sınırlaması olmaksızın sınırsız eğlence farkı Open Garden'da...</p>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="service-card">
+                                                                                      <i class="fas fa-flower"></i>i>
+                                                                                      <h3>Ücretsiz Araç Süsleme</h3>
+                                                                                      <p>Çiçek Atölyesi kalitesiyle ücretsiz araç süsleme hizmeti...</p>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="service-card">
+                                                                                      <i class="fas fa-utensils"></i>i>
+                                                                                      <h3>Zengin Menü Seçenekleri</h3>
+                                                                                      <p>Geleneksel Türk mutfağından dünya mutfağına kadar geniş menü seçeneklerimizle...</p>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="service-card">
+                                                                                      <i class="fas fa-car"></i>i>
+                                                                                      <h3>Geniş Otopark Alanı</h3>
+                                                                                      <p>200 araçlık kapalı otopark alanımızla konuklarınızın park sorunu yaşamasını önlüyoruz...</p>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="service-card">
+                                                                                      <i class="fas fa-microphone"></i>i>
+                                                                                      <h3>Profesyonel Ses Sistemi</h3>
+                                                                                      <p>Son teknoloji ses ve ışık sistemleriyle organizasyonunuza profesyonel dokunuş katıyoruz...</p>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="service-card">
+                                                                                      <i class="fas fa-users"></i>i>
+                                                                                      <h3>Kapasite Seçenekleri</h3>
+                                                                                      <p>50 kişilik intimden 1000 kişilik büyük organizasyonlara kadar esnek kapasite seçenekleri...</p>
+                                                              </div>div>
+                                          </div>div>
+                          </div>div>
+              </div>div>
+      </section>section>
+      
+      <!-- Gallery Section -->
+      <section class="gallery-section fade-in" id="gallery">
+              <div class="container">
+                          <h2><i class="fas fa-images"></i>i> Galeri</h2>
+                          <div class="row g-4">
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="gallery-item">
+                                                                                      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 250px; display: flex; align-items: center; justify-content: center;">
+                                                                                                                  <h4 style="color: white; text-align: center;">Salon Bahçe<br><small>(800 Kişilik Kapasite)</small></h4>
+                                                                                        </div>div>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="gallery-item">
+                                                                                      <div style="background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); height: 250px; display: flex; align-items: center; justify-content: center;">
+                                                                                                                  <h4 style="color: white; text-align: center;">Teras Salonu<br><small>(500 Kişilik Kapasite)</small></h4>
+                                                                                        </div>div>
+                                                              </div>div>
+                                          </div>div>
+                                          <div class="col-lg-4 col-md-6">
+                                                              <div class="gallery-item">
+                                                                                      <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 250px; display: flex; align-items: center; justify-content: center;">
+                                                                                                                  <h4 style="color: white; text-align: center;">Bahçe Alanı<br><small>(Tüm Organizasyonlar)</small></h4>
+                                                                                        </div>div>
+                                                              </div>div>
+                                          </div>div>
+                          </div>div>
+                          
+                          <!-- Facilities Table -->
+                          <div class="table-responsive mt-5">
+                                          <h3 style="color: var(--primary-color); margin-bottom: 2rem;" class="text-center"><i class="fas fa-building"></i>i> Tesis Özellikleri</h3>
+                                          <table class="table table-hover">
+                                                              <thead>
+                                                                                        <tr>
+                                                                                                                      <th><i class="fas fa-map"></i>i> Alan</th>
+                                                                                          <th><i class="fas fa-users"></i>i> Kapasite</th>
+                                                                                        </tr>
+                                                              </thead>
+                                                              <tbody>
+                                                                                        <tr>
+                                                                                                                      <td>Salon Bahçe</td>
+                                                                      <td>800 Kişi</td>
+                                                                                        </tr>
+                                                                  <tr>
+                                                                                                <td>Teras Salonu</td>td>
+                                                                                                <td>500 Kişi</td>td>
+                                                                  </tr>
+                                                                                        <tr>
+                                                                                                                      <td>Bahçe Alanı</td>
+                                                                      <td>Tüm Organizasyon Türleri</td>
+                                                                                        </tr>
+                                                                  <tr>
+                                                                                                <td>Kapalı Otopark</td>td>
+                                                                                                <td>200 Araç</td>td>
+                                                                  </tr>
+                                                              </tbody>
+                                          </table>table>
+                          </div>div>
+              </div>div>
+      </section>section>
+
+        <!-- Partners Section -->
+        <section class="partners-section fade-in" id="partners">
+                  <div class="container">
+                                <h2><i class="fas fa-handshake"></i>i> Birlikte Çalıştığımız Firmalar</h2>
+                                <div class="row g-4">
+                                                  <div class="col-lg-6">
+                                                                        <div class="partner-card">
+                                                                                                  <h3><i class="fas fa-flower"></i>i> Çiçek Atölyesi</h3>
+                                                                                                  <p><i class="fas fa-map-marker-alt"></i>i> Hamitler Mh. Gür Cd. 5.Sakarya Sok. No:2 Osmangazi/Bursa</p>
+                                                                                                <p>
+                                                                                                                              <i class="fas fa-phone"></i>i> 
+                                                                                                                              <a href="tel:+902242494244">0224 249 42 44</a>a> | 
+                                                                                                                              <a href="tel:+905326781338">0532 678 13 38</a>a>
+                                                                                                  </p>
+                                                                                                  <a href="https://www.facebook.com/pages/Çiçek-Atölyesi/316598411870545" class="btn btn-sm btn-primary mt-2">
+                                                                                                                                <i class="fab fa-facebook"></i>i> Facebook Sayfası
+                                                                                                    </a>a>
+                                                                        </div>div>
+                                                  </div>div>
+                                                  <div class="col-lg-6">
+                                                                        <div class="partner-card">
+                                                                                                  <h3><i class="fas fa-camera"></i>i> Foto Yiğit</h3>
+                                                                                                  <p><i class="fas fa-map-marker-alt"></i>i> Bağlarbaşı Mh. Mümin Gençoğlu Cad. No: 51/A Osmangazi/Bursa</p>
+                                                                                                  <p>
+                                                                                                                                <i class="fas fa-phone"></i>i> 
+                                                                                                                                <a href="tel:+902242496218">0224 249 62 18</a>a> | 
+                                                                                                                                <a href="tel:+905356126603">0535 612 66 03</a>a>
+                                                                                                    </p>
+                                                                                                  <a href="https://www.facebook.com/fotoyigit" class="btn btn-sm btn-primary mt-2">
+                                                                                                                                <i class="fab fa-facebook"></i>i> Facebook Sayfası
+                                                                                                    </a>a>
+                                                                        </div>div>
+                                                  </div>div>
+                                </div>div>
+                  </div>div>
+        </section>section>
+
+        <!-- Contact Section -->
+        <section class="contact-section fade-in" id="contact">
+                  <div class="container">
+                                <h2><i class="fas fa-envelope"></i>i> İletişim</h2>
+                                <div class="row g-4 mt-4">
+                                                  <div class="col-lg-4 col-md-6">
+                                                                        <div class="contact-card">
+                                                                                                  <i class="fas fa-phone"></i>i>
+                                                                                                  <h3>Telefon</h3>
+                                                                                                  <p>
+                                                                                                                                <a href="tel:+902242484789">0224 248 47 89</a>a><br>
+                                                                                                                                <a href="tel:+905321343278">0532 134 32 78</a>a>
+                                                                                                    </p>
+                                                                        </div>div>
+                                                  </div>div>
+                                                  <div class="col-lg-4 col-md-6">
+                                                                        <div class="contact-card">
+                                                                                                  <i class="fas fa-map-marker-alt"></i>i>
+                                                                                                  <h3>Adres</h3>
+                                                                                                  <p>Güneştepe, Recep Tayyip Erdoğan Blv NO: 40<br>16160 Osmangazi/Bursa</p>
+                                                                        </div>div>
+                                                  </div>div>
+                                                  <div class="col-lg-4 col-md-6">
+                                                                        <div class="contact-card">
+                                                                                                  <i class="fas fa-clock"></i>i>
+                                                                                                  <h3>Çalışma Saatleri</h3>
+                                                                                                  <p>Pazartesi - Pazar<br>09:00 - 22:00</p>
+                                                                        </div>div>
+                                                  </div>div>
+                                </div>div>
+                                <div class="text-center mt-4">
+                                                  <a href="https://wa.me/905321343278?text=Merhaba,%20Open%20Garden%20Bursa%20hakkında%20bilgi%20almak%20istiyorum." class="btn btn-success btn-lg">
+                                                                        <i class="fab fa-whatsapp"></i>i> WhatsApp ile İletişime Geç
+                                                  </a>a>
+                                </div>div>
+                  </div>div>
+        </section>section>
+
+        <!-- Footer -->
+        <footer>
+                  <div class="container">
+                                <p>&copy; 2025 Open Garden Bursa - Tüm Hakları Saklıdır.</p>
+                                <div>
+                                                  <a href="https://www.facebook.com/opengarden"><i class="fab fa-facebook"></i>i> Facebook</a>a>
+                                                  <a href="https://www.instagram.com/opengardenbursa"><i class="fab fa-instagram"></i>i> Instagram</a>a>
+                                </div>
+                  </div>
+        </footer>
+
+        <!-- Bootstrap 5.3.0 JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+                  // Smooth scrolling
+                  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                                anchor.addEventListener('click', function (e) {
+                                                  e.preventDefault();
+                                                  const target = document.querySelector(this.getAttribute('href'));
+                                                  if (target) {
+                                                                        target.scrollIntoView({
+                                                                                                  behavior: 'smooth',
+                                                                                                  block: 'start'
+                                                                          });
+                                                  }
+                                });
+                  });
+
+                  // Fade-in animation on scroll
+                  const observerOptions = {
+                                threshold: 0.1,
+                                rootMargin: '0px 0px -50px 0px'
+                  };
+
+                  const observer = new IntersectionObserver(function(entries) {
+                                entries.forEach(entry => {
+                                                  if (entry.isIntersecting) {
+                                                                        entry.target.classList.add('fade-in');
+                                                  }
+                                });
+                  }, observerOptions);
+
+                  document.querySelectorAll('.fade-in').forEach(el => {
+                                observer.observe(el);
+                  });
+        </script>
+  </body>
+</html>html>
+        </script>
+                                </div>
+        </footer>
+                                                                                                </p></p>
+                                                                  </tr></td></td>
+                                                                                        </tr>
+                                                                  </tr></td></td>
+                                                                                        </tr>
+                                                              </tbody></th></th>
+                                                                                        </tr>
+                                                              </thead></small></small></p></p></h1>
+  </body>
                               margin-top: 2rem;
                 }
 
