@@ -4,12 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Open Garden Bursa - Bursa'nın En Modern Düğün Salonu. Düğün, nişan, kına geceleri ve özel organizasyonlar için ideal mekan.">
+    <meta name="keywords" content="bursa düğün salonu, open garden bursa, düğün organizasyonu, nişan salonu, kına gecesi, bursa düğün">
+    <meta name="author" content="Open Garden Bursa">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Open Garden Bursa - Modern Düğün Salonu">
+    <meta property="og:description" content="Bursa'nın en modern düğün salonu. Düğün, nişan, kına geceleri ve özel organizasyonlar için ideal mekan.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://opengardenbursa.com">
+    
     <title>Open Garden Bursa - Modern Düğün Salonu - Bursa Düğün Organizasyonları</title>
     
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Font Awesome Icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
@@ -154,7 +169,7 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 800;
             margin-bottom: 1.5rem;
             text-shadow: 2px 2px 20px rgba(0,0,0,0.3);
@@ -165,7 +180,7 @@
         }
 
         .hero-content p {
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 2vw, 1.4rem);
             margin-bottom: 2.5rem;
             max-width: 700px;
             margin-left: auto;
@@ -183,6 +198,7 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(245, 87, 108, 0.3);
+            color: white;
         }
 
         .btn-primary:hover {
@@ -197,6 +213,34 @@
             position: relative;
         }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
         .feature-card {
             background: white;
             padding: 40px 30px;
@@ -207,336 +251,40 @@
             transition: all 0.4s ease;
             margin-bottom: 30px;
             border: 1px solid rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
         }
 
         .feature-card:hover {
-            transform: translateY(-15px) scale(1.02);
+            transform: translateY(-15px);
             box-shadow: 0 25px 60px rgba(0,0,0,0.15);
         }
 
         .feature-icon {
-            font-size: 3.5rem;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 25px;
             background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
             transition: all 0.3s ease;
         }
 
         .feature-card:hover .feature-icon {
-            transform: scale(1.1);
+            transform: rotate(360deg);
         }
 
-        .feature-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            transition: all 0.3s ease;
-        }
-
-        .feature-card:hover img {
-            transform: scale(1.05);
-        }
-
-        .feature-card h4 {
-            color: var(--text-dark);
+        .feature-card h3 {
+            font-size: 1.5rem;
             margin-bottom: 15px;
-            font-weight: 600;
+            color: var(--text-dark);
         }
 
         .feature-card p {
             color: #666;
-            font-weight: 400;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            padding: 100px 0;
-            background: white;
-        }
-
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 20px;
-            margin-bottom: 30px;
-            cursor: pointer;
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-
-        .gallery-item:hover {
-            transform: scale(1.05) rotate(1deg);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            transition: all 0.4s ease;
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: all 0.4s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            opacity: 0.9;
-        }
-
-        .gallery-overlay h5 {
-            color: white;
-            font-weight: 700;
-            text-align: center;
-            font-size: 1.3rem;
-            transform: translateY(20px);
-            transition: all 0.4s ease;
-        }
-
-        .gallery-item:hover .gallery-overlay h5 {
-            transform: translateY(0);
-        }
-
-        /* Partners Section */
-        .partners-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-        }
-
-        .partner-card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px 30px;
-            border-radius: 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-            height: 100%;
-            margin-bottom: 30px;
-            transition: all 0.4s ease;
-        }
-
-        .partner-card:hover {
-            transform: translateY(-10px);
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        .partner-card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 15px;
-            margin-bottom: 25px;
-        }
-
-        .partner-card h4 {
-            color: white;
-            margin-bottom: 20px;
-        }
-
-        .partner-card p {
-            color: rgba(255,255,255,0.9);
-            margin-bottom: 15px;
-        }
-
-        .partner-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            padding: 100px 0;
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-        }
-
-        .contact-info {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            margin-bottom: 30px;
-            transition: all 0.3s ease;
-        }
-
-        .contact-info:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.15);
-        }
-
-        .contact-info h4 {
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 10px;
-            font-weight: 500;
-        }
-
-        .contact-info i {
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-right: 10px;
-            font-size: 1.2rem;
-        }
-
-        .contact-info a {
-            color: white;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: block;
-            margin: 5px 0;
-        }
-
-        .contact-info a:hover {
-            color: var(--accent-color);
-            transform: scale(1.05);
-        }
-
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
-            color: white;
-            padding: 60px 0 30px;
-            text-align: center;
-        }
-
-        .footer-social {
-            margin-bottom: 30px;
-        }
-
-        .footer-social a {
-            color: white;
-            font-size: 2rem;
-            margin: 0 20px;
-            padding: 15px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.1);
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .footer-social a:hover {
-            background: var(--gradient-primary);
-            transform: translateY(-5px) scale(1.1);
-        }
-
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(135deg, #25d366, #128c7e);
-            color: white;
-            border-radius: 60px;
-            padding: 18px 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
-            transition: all 0.3s ease;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); }
-            50% { box-shadow: 0 15px 40px rgba(37, 211, 102, 0.6); }
-            100% { box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4); }
-        }
-
-        .whatsapp-btn:hover {
-            background: linear-gradient(135deg, #128c7e, #25d366);
-            color: white;
-            transform: translateY(-5px) scale(1.05);
-            text-decoration: none;
-            animation: none;
-        }
-
-        .whatsapp-btn i {
-            margin-right: 10px;
-            font-size: 1.3rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            
-            .hero-content p {
-                font-size: 1.2rem;
-            }
-            
-            .phone-info {
-                display: none;
-            }
-
-            .navbar-brand {
-                font-size: 1.5rem;
-            }
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-title h2 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 15px;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-title p {
-            font-size: 1.2rem;
-            color: #666;
-            font-weight: 400;
-        }
-
-        .partners-section .section-title h2,
-        .partners-section .section-title p {
-            color: white;
-            background: none;
-            -webkit-text-fill-color: white;
-        }
-
-        .contact-section .section-title h2,
-        .contact-section .section-title p {
-            color: white;
-            background: none;
-            -webkit-text-fill-color: white;
+            font-size: 1rem;
         }
 
         .fade-in {
@@ -550,14 +298,324 @@
             transform: translateY(0);
         }
 
-        /* Floating elements animation */
-        .floating {
-            animation: floating 3s ease-in-out infinite;
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: white;
         }
 
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        .service-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 30px;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            height: 100%;
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover::before {
+            top: -60%;
+            right: -60%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(102, 126, 234, 0.4);
+        }
+
+        .service-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            color: white;
+            padding: 30px 20px;
+            transform: translateY(100%);
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h5 {
+            font-size: 1.2rem;
+            margin: 0;
+        }
+
+        /* Partners Section */
+        .partners-section {
+            padding: 100px 0;
+            background: white;
+        }
+
+        .partner-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            height: 100%;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+            margin-bottom: 30px;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+        }
+
+        .partner-card img {
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 25px;
+        }
+
+        .partner-card h4 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .partner-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .partner-card a {
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .partner-card a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 0;
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .contact-info {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 40px 30px;
+            border-radius: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-info:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .contact-info h4 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-info i {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--warning-color);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1a1a2e;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-social {
+            margin-bottom: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-social a:hover {
+            color: var(--warning-color);
+            transform: translateY(-5px);
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .whatsapp-btn:hover {
+            background: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(37, 211, 102, 0.5);
+            color: white;
+        }
+
+        .whatsapp-btn i {
+            font-size: 1.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar-brand {
+                font-size: 1.4rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .whatsapp-btn {
+                padding: 12px 20px;
+                font-size: 0.95rem;
+                bottom: 20px;
+                right: 20px;
+            }
+
+            .phone-info {
+                display: none;
+            }
+
+            .social-links {
+                margin-top: 15px;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-on-load {
+            animation: fadeIn 0.8s ease-out;
         }
     </style>
 </head>
@@ -565,42 +623,41 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">
-                Open Garden Bursa
-            </a>
-            
-            <div class="d-none d-lg-flex align-items-center">
-                <div class="phone-info">
-                    <i class="fas fa-phone"></i> 
-                    <a href="tel:+902242484789">0224 248 47 89</a> - 
-                    <a href="tel:+905321343278">0532 134 32 78</a>
-                </div>
-                <div class="social-links">
-                    <a href="https://www.facebook.com/opengarden" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/opengardenbursa" target="_blank"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-            
+            <a class="navbar-brand animate-on-load" href="#home">Open Garden Bursa</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
+                <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Anasayfa</a>
+                        <a class="nav-link" href="#home">Ana Sayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#features">Hizmetlerimiz</a>
+                        <a class="nav-link" href="#features">Özellikler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Hizmetler</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#gallery">Galeri</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#partners">İş Ortaklarımız</a>
+                        <a class="nav-link" href="#partners">İş Ortakları</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">İletişim</a>
+                    </li>
+                    <li class="nav-item d-none d-lg-block">
+                        <span class="phone-info">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+905321343278">0532 134 32 78</a>
+                        </span>
+                    </li>
+                    <li class="nav-item">
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/opengarden" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/opengardenbursa" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -611,9 +668,9 @@
     <section id="home" class="hero-section">
         <div class="container">
             <div class="hero-content fade-in">
-                <h1>Open Garden Düğün ve Toplantı Salonu</h1>
-                <p>Düğün, Nişan, Kına Geceleri, Özel gün ve Gecelerinizde Davet Organizasyonları; Mezuniyet Baloları, Doğum Günü Partileri ve benzer Tüm Organizasyonlarınıza Ev Sahipliği Yapmak için Sizlerleyiz...</p>
-                <a href="#contact" class="btn btn-primary btn-lg">Rezervasyon Yap</a>
+                <h1>Open Garden Bursa</h1>
+                <p>Hayalinizdeki düğün ve organizasyonlar için mükemmel mekan. Modern tasarım, profesyonel hizmet ve unutulmaz anılar için doğru adres.</p>
+                <a href="#contact" class="btn btn-primary">Hemen İletişime Geçin</a>
             </div>
         </div>
     </section>
@@ -622,92 +679,120 @@
     <section id="features" class="features-section">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Özel Hizmetlerimiz</h2>
-                <p>Size özel avantajlarımızla unutulmaz anlar yaşatıyoruz</p>
+                <h2>Neden Open Garden?</h2>
+                <p>Size özel hizmetlerimiz ve ayrıcalıklarımız</p>
             </div>
             
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <img src="http://selimogullariplaza.com/wp-content/uploads/2018/11/EGLENCE1-300x198.jpg" alt="Sınırsız Eğlence">
-                        <div class="feature-icon">
-                            <i class="fas fa-music"></i>
-                        </div>
-                        <h4>Sınırsız Eğlence</h4>
-                        <p>Gece düğünlerimizde saat sınırlaması olmaksızın sınırsız eğlence farkı Open Garden'da...</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <img src="http://selimogullariplaza.com/wp-content/uploads/2018/11/ciçek-atolyesi1-300x278.jpg" alt="Ücretsiz Araç Süsleme">
-                        <div class="feature-icon">
-                            <i class="fas fa-car"></i>
-                        </div>
-                        <h4>Ücretsiz Araç Süsleme</h4>
-                        <p>Çiçek Atölyesi kalitesiyle ücretsiz araç süsleme hizmeti...</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-utensils"></i>
-                        </div>
-                        <h4>🍽️ Zengin Menü Seçenekleri</h4>
-                        <p>Geleneksel Türk mutfağından dünya mutfağına kadar geniş menü seçeneklerimizle damaklarınızı şenlendiriyoruz.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-parking"></i>
-                        </div>
-                        <h4>🚗 Geniş Otopark Alanı</h4>
-                        <p>200 araçlık kapalı otopark alanımızla konuklarınızın park sorunu yaşamasını önlüyoruz.</p>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-microphone"></i>
-                        </div>
-                        <h4>🎤 Profesyonel Ses Sistemi</h4>
-                        <p>Son teknoloji ses ve ışık sistemleriyle organizasyonunuza profesyonel dokunuş katıyoruz.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row mt-4">
-                <div class="col-lg-4 col-md-6">
+                <div class="col-lg-3 col-md-6">
                     <div class="feature-card fade-in">
                         <div class="feature-icon">
                             <i class="fas fa-users"></i>
                         </div>
-                        <h4>👥 Kapasite Seçenekleri</h4>
-                        <p>50 kişilik intimden 1000 kişilik büyük organizasyonlara kadar esnek kapasite seçenekleri.</p>
+                        <h3>Geniş Kapasite</h3>
+                        <p>800 kişilik ana salon ve 500 kişilik teras salonumuzla büyük organizasyonlara ev sahipliği yapıyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-parking"></i>
+                        </div>
+                        <h3>Otopark</h3>
+                        <p>300 araçlık kapalı otopark alanı ile misafirlerinizin konforu için özel park alanı.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Modern Ses & Işık</h3>
+                        <p>Son teknoloji ses ve ışık sistemleri ile davetinize özel atmosfer yaratıyoruz.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6">
+                    <div class="feature-card fade-in">
+                        <div class="feature-icon">
+                            <i class="fas fa-concierge-bell"></i>
+                        </div>
+                        <h3>Profesyonel Ekip</h3>
+                        <p>Deneyimli ve güler yüzlü ekibimiz ile organizasyonunuz kusursuz gerçekleşir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Hizmetlerimiz</h2>
+                <p>Her türlü organizasyona özel çözümler</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-ring"></i>
+                        </div>
+                        <h3>Düğün</h3>
+                        <p>Hayatınızın en özel günü için kusursuz organizasyon. Profesyonel ekip, zengin menü ve unutulmaz anılar.</p>
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-crown"></i>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-heart"></i>
                         </div>
-                        <h4>👑 VIP Hizmet</h4>
-                        <p>Gelin ve damat için özel hazırlanmış VIP bekleme alanları ve özel hizmet anlayışı.</p>
+                        <h3>Nişan</h3>
+                        <p>Sevdiklerinizle birlikte özel anlar yaşayın. Şık dekorasyon ve özenli hizmet ile nişan töreni.</p>
                     </div>
                 </div>
                 
                 <div class="col-lg-4 col-md-6">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-leaf"></i>
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-music"></i>
                         </div>
-                        <h4>🌿 Doğayla İç İçe</h4>
-                        <p>Bahçe düğünleri için özel tasarlanmış doğal alanlarımızla rüya gibi düğünler.</p>
+                        <h3>Kına Gecesi</h3>
+                        <p>Geleneksel kına geceniz için özel dekorasyon, canlı müzik ve eğlence programları.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-birthday-cake"></i>
+                        </div>
+                        <h3>Doğum Günü</h3>
+                        <p>Her yaşa özel doğum günü organizasyonları. Çocuk partileri, yetişkin etkinlikleri.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3>Kurumsal Etkinlikler</h3>
+                        <p>Seminer, konferans, toplantı ve gala organizasyonları için profesyonel hizmet.</p>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-6">
+                    <div class="service-card fade-in">
+                        <div class="service-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3>Özel Günler</h3>
+                        <p>Mezuniyet, baby shower ve tüm özel günleriniz için unutulmaz organizasyonlar.</p>
                     </div>
                 </div>
             </div>
@@ -725,7 +810,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item fade-in">
-                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/bahce-i-8.jpg" alt="Salon Bahçe">
+                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/bahce-i-8.jpg" alt="Salon Bahçe" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Salon Bahçe<br>800 Kişilik Kapasite</h5>
                         </div>
@@ -734,7 +819,7 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item fade-in">
-                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/teras-internet-5.jpg" alt="Teras Salon">
+                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/teras-internet-5.jpg" alt="Teras Salon" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Teras Salonumuz<br>500 Kişilik Kapasite</h5>
                         </div>
@@ -743,7 +828,7 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item fade-in">
-                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/bahce-i-7.jpg" alt="Bahçe Organizasyon">
+                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/bahce-i-7.jpg" alt="Bahçe Organizasyon" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Bahçemizde<br>Her Türlü Organizasyon</h5>
                         </div>
@@ -752,7 +837,7 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item fade-in">
-                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/cıkıs3.jpg" alt="Görsel Çıkışlar">
+                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/cıkıs3.jpg" alt="Görsel Çıkışlar" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Görsel Çıkışlarımız</h5>
                         </div>
@@ -761,7 +846,7 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item fade-in">
-                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/cıkıs-4.jpg" alt="Animasyonlar">
+                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/cıkıs-4.jpg" alt="Animasyonlar" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Animasyonlarımız<br>Volkan, Konfeti, Kar, Sis</h5>
                         </div>
@@ -770,7 +855,7 @@
                 
                 <div class="col-lg-4 col-md-6">
                     <div class="gallery-item fade-in">
-                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/cıkıs-2.jpg" alt="Gelin Arabası">
+                        <img src="https://selimogullariplaza.com/wp-content/uploads/2018/11/cıkıs-2.jpg" alt="Gelin Arabası" loading="lazy">
                         <div class="gallery-overlay">
                             <h5>Gelin Arabasıyla<br>Muhteşem Çıkış</h5>
                         </div>
@@ -791,21 +876,21 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="partner-card fade-in">
-                        <img src="http://selimogullariplaza.com/wp-content/uploads/2018/11/cıcek-atolyesi-2.jpg" alt="Çiçek Atölyesi">
+                        <img src="http://selimogullariplaza.com/wp-content/uploads/2018/11/cıcek-atolyesi-2.jpg" alt="Çiçek Atölyesi" loading="lazy">
                         <h4>Çiçek Atölyesi</h4>
                         <p><strong>Adres:</strong> Hamitler Mh. Gür Cd. 5.Sakarya Sok. No:2 Osmangazi/Bursa</p>
                         <p><strong>Tel:</strong> <a href="tel:+902242494244">0224 249 42 44</a> - <a href="tel:+905326781338">0532 678 13 38</a></p>
-                        <a href="https://www.facebook.com/pages/Çiçek-Atölyesi/316598411870545" target="_blank" class="btn btn-primary">Facebook Sayfası</a>
+                        <a href="https://www.facebook.com/pages/Çiçek-Atölyesi/316598411870545" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Facebook Sayfası</a>
                     </div>
                 </div>
                 
                 <div class="col-lg-6">
                     <div class="partner-card fade-in">
-                        <img src="http://selimogullariplaza.com/wp-content/uploads/2018/11/foto-yiğit-300x169.jpg" alt="Foto Yiğit">
+                        <img src="http://selimogullariplaza.com/wp-content/uploads/2018/11/foto-yiğit-300x169.jpg" alt="Foto Yiğit" loading="lazy">
                         <h4>Foto Yiğit</h4>
                         <p><strong>Adres:</strong> Bağlarbaşı Mh. Mümin Gençoğlu Cad. No: 51/A Osmangazi/Bursa</p>
                         <p><strong>Tel:</strong> <a href="tel:+902242496218">0224 249 62 18</a> - <a href="tel:+905356126603">0535 612 66 03</a></p>
-                        <a href="https://www.facebook.com/fotoyigit?fref=ts" target="_blank" class="btn btn-primary">Facebook Sayfası</a>
+                        <a href="https://www.facebook.com/fotoyigit?fref=ts" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Facebook Sayfası</a>
                     </div>
                 </div>
             </div>
@@ -832,7 +917,7 @@
                 <div class="col-lg-4">
                     <div class="contact-info fade-in">
                         <h4><i class="fas fa-map-marker-alt"></i> Adres</h4>
-                        <p>Güneştepe, Recep Tayyip Erdoğan Blv NO: 40, 16160 Osmangazi̇/Bursa</p>
+                        <p>Güneştepe, Recep Tayyip Erdoğan Blv NO: 40, 16160 Osmangazi/Bursa</p>
                     </div>
                 </div>
                 
@@ -851,9 +936,9 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-social fade-in">
-                <a href="https://www.facebook.com/opengarden" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/opengardenbursa" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="tel:+905321343278"><i class="fas fa-phone"></i></a>
+                <a href="https://www.facebook.com/opengarden" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/opengardenbursa" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="tel:+905321343278" aria-label="Telefon"><i class="fas fa-phone"></i></a>
             </div>
             <div class="mt-3">
                 <p>&copy; 2025 Open Garden Bursa - Open Garden Düğün Salonu - Bursa Düğün Salonu. Tüm hakları saklıdır.</p>
@@ -863,13 +948,16 @@
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/905321343278?text=Merhaba, Open Garden Bursa hakkında bilgi almak istiyorum." 
-       class="whatsapp-btn" target="_blank">
+       class="whatsapp-btn" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="WhatsApp ile iletişime geç">
         <i class="fab fa-whatsapp"></i>
         WhatsApp
     </a>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     
     <script>
         // Smooth scrolling for navigation links
@@ -878,10 +966,18 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    const navHeight = document.querySelector('.navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
                     });
+                    
+                    // Close mobile menu if open
+                    const navbarCollapse = document.querySelector('.navbar-collapse');
+                    if (navbarCollapse.classList.contains('show')) {
+                        navbarCollapse.classList.remove('show');
+                    }
                 }
             });
         });
@@ -909,8 +1005,10 @@
             const navbar = document.querySelector('.navbar');
             if (window.scrollY > 50) {
                 navbar.style.background = 'rgba(255, 255, 255, 0.98)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
             } else {
                 navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+                navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.1)';
             }
         });
 
@@ -923,6 +1021,19 @@
                 }, 100);
             }
         });
+
+        // Lazy loading for images
+        if ('loading' in HTMLImageElement.prototype) {
+            const images = document.querySelectorAll('img[loading="lazy"]');
+            images.forEach(img => {
+                img.src = img.src;
+            });
+        } else {
+            // Fallback for browsers that don't support lazy loading
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+        }
     </script>
 </body>
 </html>
