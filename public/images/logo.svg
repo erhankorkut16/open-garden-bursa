@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+    <!-- Background Circle -->
+    <circle cx="100" cy="100" r="98" fill="none" stroke="#667eea" stroke-width="2"/>
+
+    <!-- Leaf 1 - Top Left -->
+    <path d="M 70 60 Q 60 50 55 65 Q 60 55 70 60" fill="#667eea" opacity="0.8"/>
+
+    <!-- Leaf 2 - Top Right -->
+    <path d="M 130 65 Q 145 55 150 70 Q 140 58 130 65" fill="#764ba2" opacity="0.8"/>
+
+    <!-- Leaf 3 - Bottom Left -->
+    <path d="M 65 140 Q 55 155 65 165 Q 60 150 65 140" fill="#764ba2" opacity="0.8"/>
+
+    <!-- Leaf 4 - Bottom Right -->
+    <path d="M 135 140 Q 150 150 155 165 Q 145 155 135 140" fill="#667eea" opacity="0.8"/>
+
+    <!-- Center Flower -->
+    <circle cx="100" cy="100" r="8" fill="#f5576c"/>
+
+    <!-- Petals -->
+    <circle cx="100" cy="80" r="5" fill="#f093fb" opacity="0.8"/>
+    <circle cx="120" cy="90" r="5" fill="#f093fb" opacity="0.8"/>
+    <circle cx="120" cy="110" r="5" fill="#f093fb" opacity="0.8"/>
+    <circle cx="100" cy="120" r="5" fill="#f093fb" opacity="0.8"/>
+    <circle cx="80" cy="110" r="5" fill="#f093fb" opacity="0.8"/>
+    <circle cx="80" cy="90" r="5" fill="#f093fb" opacity="0.8"/>
+
+    <!-- Text -->
+    <text x="100" y="155" font-family="Poppins, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#667eea" letter-spacing="1">OG BURSA</text>
+</svg>
